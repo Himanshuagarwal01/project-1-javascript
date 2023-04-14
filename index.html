@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="index.css">
+
+    <script>
+        let a;
+           let time;
+           let date;
+       setInterval(() => {
+           
+           a=new Date();
+           date=a.toLocaleDateString();
+           time=a.getHours() +':'+a.getMinutes() +':'+a.getSeconds() ;
+           document.getElementById("time").innerHTML=time +" on "+ date;
+       }, 1000);
+   </script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li><select name="navoption" id="option">
+                    <option value="dropdown">Dropdown</option>
+                    <option value="Action">Action</option>
+                    <option value="AnotherAction">Another Action</option>
+                </select></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+    <h1>Current date is : <span id="time"></span></h1>
+    <p>we are here to display you the time </p>
+</div>
+</body>
+</html>
